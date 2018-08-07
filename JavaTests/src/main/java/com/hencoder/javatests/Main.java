@@ -1,17 +1,12 @@
 package com.hencoder.javatests;
 
-import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,8 +18,10 @@ public class Main {
 //        runSynchronized1Demo();
 //        runSynchronized2Demo();
 //        runSynchronized3Demo();
-        runReadWriteLockDemo();
-//        runWaitNotifyDemo();
+//        runReadWriteLockDemo();
+//        runThreadInteractionDemo();
+//        runWaitDemo();
+        runCustomizableThreadDemo();
     }
 
     /**
@@ -131,7 +128,16 @@ public class Main {
         new ReadWriteLockDemo().runTest();
     }
 
-    /*static void runWaitNotifyDemo() {
-        new WaitNotifyDemo().runTest();
-    }*/
+    static void runThreadInteractionDemo() {
+        new ThreadInteractionDemo().runTest();
+    }
+
+    static void runWaitDemo() {
+        new WaitDemo().runTest();
+
+    }
+
+    static void runCustomizableThreadDemo() {
+        new CustomizableThreadDemo().runTest();
+    }
 }
