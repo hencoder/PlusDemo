@@ -62,6 +62,7 @@ public class TwoPager extends ViewGroup {
         boolean result = false;
         switch (ev.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:
+                scrolling = false;
                 downX = ev.getX();
                 downY = ev.getY();
                 downScrollX = getScrollX();
