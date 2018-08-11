@@ -3,7 +3,7 @@
     package="com.hencoder.a15">
 
     <application
-        android:name=".HenApplication"
+        android:name=".com.hencoder.a16.HenApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
