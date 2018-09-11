@@ -22,7 +22,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -33,4 +32,27 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+}
+
+
+
+def patchPath = 'com/hencoder/a24/Util'
+
+task hotfix << {
+    exec {
+        commandLine 'rm', '-r', './build/patch'
+    }
+    exec {
+        commandLine 'mkdir', './build/patch'
+    }
+    exec {
+        commandLine 'javac', "./src/main/java/${patchPath}.java", '-d', './build/patch'
+    }
+    exec {
+        commandLine '/Users/rengwuxian/.android-sdk/build-tools/28.0.2/d8', "./build/patch/${patchPath}.class", '--output', './build/patch'
+    }
+    exec {
+        commandLine 'mv', "./build/patch/classes.dex", './build/patch/hotfix.dex'
+    }
 }

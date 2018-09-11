@@ -1,7 +1,7 @@
 package com.hencoder.a24;
 
-public class Utils {
+public class Util {
     public String getTitle() {
-        return "I'm from the original app!";
+        return "I'm an auto fix!";
     }
 }
