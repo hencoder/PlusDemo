@@ -24,6 +24,11 @@
             <option value="$PROJECT_DIR$/23" />
             <option value="$PROJECT_DIR$/23plugin" />
             <option value="$PROJECT_DIR$/24" />
+            <option value="$PROJECT_DIR$/25" />
+            <option value="$PROJECT_DIR$/25-annotations" />
+            <option value="$PROJECT_DIR$/25-lib" />
+            <option value="$PROJECT_DIR$/25-lib-reflection" />
+            <option value="$PROJECT_DIR$/25-processor" />
             <option value="$PROJECT_DIR$/JavaTests" />
           </set>
         </option>

@@ -1,2 +1,2 @@
-include ':22', ':23', ':23plugin', ':24'
+include ':22', ':23', ':23plugin', ':24', ':25', ':25-processor', ':25-annotations', ':25-lib', ':25-lib-reflection'
 include '07', ':08', ':09', ':10', ':11', ':12', ':13', ':JavaTests', ':15', ':16', '17', ':17liba', ':17libb'
